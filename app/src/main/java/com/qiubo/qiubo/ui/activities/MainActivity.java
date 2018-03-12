@@ -9,7 +9,7 @@ import com.qiubo.qiubo.ui.adapters.viewpagers.QiuboPagerAdapter;
 import com.qiubo.qiubo.ui.adapters.viewpagers.SimpleButtonDelegate;
 import com.qiubo.qiubo.ui.adapters.viewpagers.SimpleImageDelegate;
 import com.qiubo.qiubo.ui.adapters.viewpagers.SimpleTextViewDelegate;
-import com.qiubo.qiubo.ui.viewmodels.ContentVM;
+import com.qiubo.qiubo.ui.viewmodels.ItemVM;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,33 +38,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadItems() {
-        List<ContentVM> contentVMS = new ArrayList<>();
+        List<ItemVM> itemVMS = new ArrayList<>();
 
-        ContentVM vm1 = new ContentVM();
+        ItemVM vm1 = new ItemVM();
         vm1.setViewType(SimpleImageDelegate.DELEGATE_TYPE);
 
-        ContentVM vm2 = new ContentVM();
+        ItemVM vm2 = new ItemVM();
         vm2.setViewType(SimpleButtonDelegate.DELEGATE_TYPE);
 
-        ContentVM vm3 = new ContentVM();
+        ItemVM vm3 = new ItemVM();
         vm3.setViewType(SimpleTextViewDelegate.DELEGATE_TYPE);
 
-        ContentVM vm4 = new ContentVM();
+        ItemVM vm4 = new ItemVM();
         vm4.setViewType(SimpleImageDelegate.DELEGATE_TYPE);
 
-        ContentVM vm5 = new ContentVM();
+        ItemVM vm5 = new ItemVM();
         vm5.setViewType(SimpleButtonDelegate.DELEGATE_TYPE);
 
-        ContentVM vm6 = new ContentVM();
+        ItemVM vm6 = new ItemVM();
         vm6.setViewType(SimpleTextViewDelegate.DELEGATE_TYPE);
 
-        contentVMS.add(vm1);
-        contentVMS.add(vm2);
-        contentVMS.add(vm3);
-        contentVMS.add(vm4);
-        contentVMS.add(vm5);
-        contentVMS.add(vm6);
+        itemVMS.add(vm1);
+        itemVMS.add(vm2);
+        itemVMS.add(vm3);
+        itemVMS.add(vm4);
+        itemVMS.add(vm5);
+        itemVMS.add(vm6);
 
-        mAdapter.setItems(contentVMS);
+        mAdapter.setItems(itemVMS);
     }
 }

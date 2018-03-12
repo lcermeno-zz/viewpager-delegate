@@ -4,7 +4,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.qiubo.qiubo.ui.viewmodels.ContentVM;
+import com.qiubo.qiubo.ui.viewmodels.ItemVM;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import java.util.List;
 
 public class QiuboPagerAdapter extends PagerAdapter {
 
-    private List<ContentVM> mItems;
-    private ViewPagerDelegateManager<ContentVM> mDelegateManager;
+    private List<ItemVM> mItems;
+    private ViewPagerDelegateManager<ItemVM> mDelegateManager;
 
     public QiuboPagerAdapter() {
         mDelegateManager = new ViewPagerDelegateManager<>();
@@ -45,7 +45,7 @@ public class QiuboPagerAdapter extends PagerAdapter {
         container.removeView((View) object);
     }
 
-    public void setItems(List<ContentVM> items) {
+    public void setItems(List<ItemVM> items) {
         mItems = items;
         notifyDataSetChanged();
     }
