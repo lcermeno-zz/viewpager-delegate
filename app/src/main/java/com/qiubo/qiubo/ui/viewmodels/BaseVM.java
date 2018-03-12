@@ -5,13 +5,13 @@ package com.qiubo.qiubo.ui.viewmodels;
  */
 
 public abstract class BaseVM {
-    private int viewType;
+    private int mViewType;
 
     public int getViewType() {
-        return viewType;
+        return mViewType;
     }
 
     public void setViewType(int viewType) {
-        this.viewType = viewType;
+        mViewType = viewType;
     }
 }
