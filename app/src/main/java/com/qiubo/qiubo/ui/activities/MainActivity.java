@@ -42,21 +42,27 @@ public class MainActivity extends AppCompatActivity {
 
         ItemVM vm1 = new ItemVM();
         vm1.setViewType(SimpleImageDelegate.DELEGATE_TYPE);
+        vm1.setResourceId(R.drawable.image_1);
 
         ItemVM vm2 = new ItemVM();
         vm2.setViewType(SimpleButtonDelegate.DELEGATE_TYPE);
+        vm2.setResourceId(R.string.lbl_learn_and_share);
 
         ItemVM vm3 = new ItemVM();
         vm3.setViewType(SimpleTextViewDelegate.DELEGATE_TYPE);
+        vm3.setResourceId(R.string.lbl_hello_developers);
 
         ItemVM vm4 = new ItemVM();
         vm4.setViewType(SimpleImageDelegate.DELEGATE_TYPE);
+        vm4.setResourceId(R.drawable.image_2);
 
         ItemVM vm5 = new ItemVM();
         vm5.setViewType(SimpleButtonDelegate.DELEGATE_TYPE);
+        vm5.setResourceId(R.string.lbl_learn_and_share);
 
         ItemVM vm6 = new ItemVM();
         vm6.setViewType(SimpleTextViewDelegate.DELEGATE_TYPE);
+        vm6.setResourceId(R.string.lbl_this_is_qiubo);
 
         itemVMS.add(vm1);
         itemVMS.add(vm2);

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qiubo.qiubo.R;
+import com.qiubo.qiubo.ui.viewholders.ImageViewHolder;
 import com.qiubo.qiubo.ui.viewmodels.ItemVM;
 
 import java.util.List;
@@ -28,16 +29,19 @@ public class SimpleImageDelegate extends ViewPagerDelegate<ItemVM> {
         LayoutInflater inflater = (LayoutInflater) container.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.item_simple_image_view, container, false);
         container.addView(itemView);
+        ItemVM itemVM = items.get(position);
+        onCreateViewHolder(itemView, position, itemVM);
         return itemView;
     }
 
     @Override
     void onBindViewHolder(ItemVM item, Object holder) {
-
+        ImageViewHolder viewHolder = (ImageViewHolder) holder;
+        viewHolder.setValues(item);
     }
 
     @Override
     Object buildViewHolder(View itemView) {
-        return null;
+        return new ImageViewHolder(itemView);
     }
 }
