@@ -1,6 +1,5 @@
 package com.qiubo.qiubo.ui.adapters.viewpagers.interfaces;
 
-import android.support.annotation.NonNull;
 import android.view.ViewGroup;
 
 /**
@@ -10,8 +9,6 @@ import android.view.ViewGroup;
 public interface IViewPagerDelegate<T> {
 
     int getDelegateType();
-
-    boolean isForViewType(@NonNull T items, int position);
 
     Object instantiateItem(T items, ViewGroup container, int position);
 

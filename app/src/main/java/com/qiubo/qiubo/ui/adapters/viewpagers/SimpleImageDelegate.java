@@ -25,11 +25,6 @@ public class SimpleImageDelegate extends ViewPagerDelegate<ContentVM> {
     }
 
     @Override
-    public boolean isForViewType(@NonNull List<ContentVM> items, int position) {
-        return items.get(position).getViewType() == DELEGATE_TYPE;
-    }
-
-    @Override
     public Object instantiateItem(List<ContentVM> items, ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater) container.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.item_simple_image_view, container, false);
